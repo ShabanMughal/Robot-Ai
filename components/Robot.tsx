@@ -1,8 +1,7 @@
-import React from 'react'
 import Spline from '@splinetool/react-spline/next';
 
-
 const Robot = () => {
+
   return (
     <div className='h-screen overflow-hidden z-50'>
     <Spline

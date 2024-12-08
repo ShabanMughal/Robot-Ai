@@ -61,9 +61,11 @@ const Programs: React.FC = () => {
       }
     };
 
+    
+
     const initScrollAnimation = () => {
       // Setting a fixed scroll height based on the number of frames and viewport height
-      const scrollHeight = (window.innerHeight * frames.current.maxIndex) / 300; // Adjust to your preference
+      const scrollHeight = (window.innerHeight * frames.current.maxIndex) / 100; // Adjust to your preference
       ScrollTrigger.create({
         trigger: '.parent',
         start: 'top top',
@@ -97,7 +99,7 @@ const Programs: React.FC = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 3,
           ease: 'power4.out',
           scrollTrigger: {
             trigger: titleRef.current,
@@ -115,15 +117,32 @@ const Programs: React.FC = () => {
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[10px] text-white"
+          className="font-general pt-16 text-md uppercase md:text-[20px] text-white"
         >
-          Welcome to the future of AI
+          Enter the Age of Intelligent Machines
         </h2>
       </div>
+      <div className='px-5 py-12'>
+          <p className='font-circular-web text-lg text-blue-50'>AI Programs at Your Service</p>
+          <p className='max-x-md font-robert text-lg text-blue-50 opacity-50'>
+          Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to <strong>Analyze</strong> vast data streams, <strong>Generate</strong> innovative ideas, <strong>Fix</strong> complex problems, and <strong>Adapt</strong> in real time, these intelligent systems are shaping the future. Prepare for a reality where technology isn&apos;t just a tool, but a partner in progress, transforming industries and enhancing lives.  </p>
+          </div> 
 
       <div className="parent relative w-full" style={{ height: '100vh' }}>
         <div className="w-full h-screen">
           <canvas ref={canvasRef} className="w-full h-screen"></canvas>
+        </div>
+      </div>
+      <div>
+        <div className="flex flex-col items-center gap-5 pt-5 px-14 pb-16">
+          <div className="flex flex-col items-center gap-5">
+            <h3 className="font-general text-2xl text-white">
+              AI Programs at Your Service
+            </h3>
+            <p className="text-sm text-white">
+              Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to analyze vast data streams, generate innovative ideas, fix complex problems, and adapt in real time, these intelligent systems are shaping the future. Prepare for a reality where technology isn&apos;t just a tool, but a partner in progress, transforming industries and enhancing lives.
+            </p>
+          </div>
         </div>
       </div>
     </div>
