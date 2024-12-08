@@ -1,5 +1,7 @@
+'use client'
 import Feature from "@/components/Feature";
 import Hero from "@/components/Hero";
+import Programs from "@/components/Programs";
 
 
 export default function Home() {
@@ -7,6 +9,7 @@ export default function Home() {
    <section className="overflow-hidden">
     <Hero />
     <Feature />
+    <Programs />
    </section>
   );
 }
