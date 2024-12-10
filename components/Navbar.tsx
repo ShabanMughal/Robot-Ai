@@ -1,30 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 // Define the navigation items
 const navItems = ["features", "tools", "programs", "about", "Contact"];
 
 const Navbar: React.FC = () => {
-  const [isAudio, setIsAudio] = useState(false);
-  const [indicatorActive, setIndicatorActive] = useState(false);
+  const [theme, setTheme] = useState<string>("light"); // State to manage theme
 
   // Define refs with the correct types
   const navContainer = useRef<HTMLDivElement | null>(null);
-  const audioElement = useRef<HTMLAudioElement | null>(null);
-
-  const toggleAudio = () => {
-    setIsAudio(!isAudio);
-    setIndicatorActive(!indicatorActive);
-  };
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Toggle theme function
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme); // Persist theme choice
+    handleMouseEnter()
+  };
+
   useEffect(() => {
-    if (isAudio && audioElement.current) {
-      audioElement.current.play();
-    } else if (audioElement.current) {
-      audioElement.current.pause();
-    }
-  }, [isAudio]);
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+  }, []);
 
   const handleMouseEnter = () => {
     if (audioRef.current) {
@@ -42,8 +43,13 @@ const Navbar: React.FC = () => {
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
           <div className="flex items-center gap-7">
-            
-            <Image src="/logo.svg" width={10} height={10} alt="logo" className='w-10' />
+            <Image
+              src="/logo.svg"
+              width={10}
+              height={10}
+              alt="logo"
+              className="w-10"
+            />
           </div>
 
           <div className="flex h-full items-center">
@@ -53,32 +59,27 @@ const Navbar: React.FC = () => {
                   key={item}
                   onMouseEnter={handleMouseEnter}
                   href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
+                  className="nav-hover-btn text-[#1C1C1E] dark:text-[#E5E5E5]"
                 >
                   {item}
                 </a>
               ))}
             </div>
 
+            {/* Theme Toggle Button */}
             <button
-              onClick={toggleAudio}
-              className="ml-10 flex items-center space-x-0.5"
+              className={`relative z-10 w-fit ml-5 cursor-pointer overflow-hidden rounded-full btn transition-colors  px-7 py-3`}
+              onClick={toggleTheme}
             >
-              <audio
-                ref={audioElement}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
-              {[1, 2, 3, 4].map((bar) => (
-                <div
-                  key={bar}
-                  className={`indicator-line ${
-                    indicatorActive ? "active" : ""
-                  }`}
-                  style={{ animationDelay: `${bar * 0.1}s` }}
-                />
-              ))}
+              {/* Container for animations */}
+              <div className="relative flex flex-col items-center justify-center overflow-hidden">
+                {/* Upper Layer (Default Text and Icon) */}
+                <div className=" transition-transform duration-300 ease flex items-center space-x-2">
+                  <span className="font-general text-xs uppercase text-white">
+                    {theme === "light" ? <FiSun /> : <FiMoon />}
+                  </span>
+                </div>
+              </div>
             </button>
           </div>
         </nav>

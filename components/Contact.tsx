@@ -55,7 +55,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="relative bg-black text-white" id="contact">
+    <div className="relative  bg-[#fff] dark:bg-[#594F4E] text-white" id="contact">
       {/* Section Title */}
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2

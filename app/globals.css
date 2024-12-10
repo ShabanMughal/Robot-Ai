@@ -8,6 +8,34 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+:root {
+  --background: #F5F5F5; 
+  --foreground: #1C1C1E; 
+  --accent: #007bff;
+  --secendary: #D1D5DB;
+}
+
+.dark {
+  --background: #121212; /* Dark mode background */
+  --foreground: #E5E5E5; /* Dark mode text */
+  --accent: #1E90FF; /* Dark mode accent (blue) */
+  --secendary: #333333;
+}
+
+
+.bg-body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.btn {
+  background-color: var(--accent);
+  color: white;
+}
+.secondary{
+  background-color: var(--secendary);
+  color: var(--foreground);
+}
 
 @keyframes spin {
   0% {
@@ -67,7 +95,7 @@
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
   }
 
   .floating-nav {

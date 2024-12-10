@@ -34,8 +34,8 @@ const Button = ({
       {/* Button Component */}
       <button
         id={id}
-        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-black px-7 py-3 text-white ${containerClass}`}
-        onMouseEnter={handleMouseEnter}
+        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full btn transition-colors duration-500 px-7 py-3 text-white ${containerClass}`}
+        onClick={handleMouseEnter}
       >
         {/* Container for animations */}
         <div className="relative flex flex-col items-center justify-center overflow-hidden">

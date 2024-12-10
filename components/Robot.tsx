@@ -5,7 +5,7 @@ const Robot = () => {
   return (
     <div className=''>
     <Spline
-        scene="https://prod.spline.design/jUXGBe6bhKrWBw3I/scene.splinecode" 
+        scene="https://prod.spline.design/NCQe8dUMReBbPYxM/scene.splinecode" 
       />
   </div>
   )

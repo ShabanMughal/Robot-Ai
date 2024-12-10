@@ -9,7 +9,7 @@ import Programs from "@/components/Programs";
 export default function Home() {
 
   return (
-   <section className="overflow-hidden">
+   <section className="overflow-hidden transition-colors duration-200">
      <Hero /> 
      <Feature />  
     <Programs />

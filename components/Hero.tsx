@@ -42,7 +42,7 @@ const Hero = () => {
       gsap.delayedCall(6, () => {
         gsap.to(marqueeElement, {
           x: -contentWidth,
-          duration: contentWidth / 100, // Dynamic duration
+          duration: contentWidth / 100,
           repeat: -1,
           ease: "linear",
         });
@@ -51,15 +51,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen bg-gradient-to-b from-neutral-950 to-neutral-900 overflow-hidden">
+    <div className="relative h-screen overflow-hidden bg-body transition-colors duration-500">
           <Navbar />
           <Robot  />
           <div className="absolute left-0 top-36" id="hero">
             <div className="px-5 sm:px-10">
-              <h1 className="special-font hero-heading text-blue-200">
+              <h1 className="special-font hero-heading">
                 reim<b>a</b>gine
               </h1>
-              <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
+              <p className="mb-5 max-w-64 font-robert-regular">
                 Discover AI-powered robotics <br /> Shape the future{" "}
               </p>
               <Button
@@ -74,11 +74,11 @@ const Hero = () => {
           {/* Marquee container */}
           <div
             id="marquee"
-            className="absolute bottom-0 w-full h-20 bg-black overflow-hidden"
+            className="absolute bottom-0 w-full h-20 secondary overflow-hidden transition-colors duration-500"
           >
             <div
               ref={marqueeRef}
-              className="flex whitespace-nowrap text-gray-300 tracking-wide uppercase font-zentry text-[3rem] italic"
+              className="flex whitespace-nowrap text-[#1C1C1E] dark:text-[#E5E5E5] transition-colors duration-500 tracking-wide uppercase font-zentry text-[3rem] italic"
             >
               <span className="mx-6">
                 Building Tomorrow&apos;s R<b>o</b>bots

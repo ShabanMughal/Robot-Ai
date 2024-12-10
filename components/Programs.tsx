@@ -113,7 +113,7 @@ const Programs: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative bg-black" id="programs">
+    <div className="relative  bg-[#fff] dark:bg-black" id="programs">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
