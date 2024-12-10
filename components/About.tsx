@@ -1,7 +1,7 @@
+'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +75,7 @@ const About = () => {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [cursorImage]); // Re-run effect when cursorImage changes
+  }, [cursorImage]); 
 
   return (
     <div className="relative bg-black" id="about">
@@ -102,13 +102,11 @@ const About = () => {
 
       {/* Cursor Image */}
       {cursorImage && (
-        <Image
+        <img
           ref={cursorRef}
           src={cursorImage}
-          width={250}
-          height={300}
           alt="Cursor Image"
-          className="absolute pointer-events-none object-cover rounded-lg z-50"
+          className="absolute pointer-events-none w-[250px] h-[300px] object-cover rounded-lg z-50"
           style={{ transform: 'translate(-50%, -50%)' }}
         />
       )}
