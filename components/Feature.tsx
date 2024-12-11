@@ -56,11 +56,9 @@ const BentoTilt: React.FC<BentoTiltProps> = ({ children, className = '' }) => {
 const BentoCard: React.FC<BentoCardProps> = ({ src, title, description, button }) => {
   return (
     <div className="relative size-full">
-      <video
+      <img
         src={src}
-        loop
-        muted
-        autoPlay
+        
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
       <div className="relative z-10 flex size-full flex-col justify-between p-5 dark:text-blue-50">
@@ -137,7 +135,7 @@ const Feature: React.FC = () => {
           <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
             <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
               <BentoCard
-                src="videos/feature-2.mp4"
+                src="images/362578cf-6bfb-477b-ac0c-1b44991c8ffd.jpg"
                 title={
                   <>
                     zig<b>m</b>a

@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline/next';
 const Robot = () => {
 
   return (
-    <div className=''>
+    <div className='h-screen'>
     <Spline
         scene="https://prod.spline.design/NCQe8dUMReBbPYxM/scene.splinecode" 
       />
