@@ -123,7 +123,7 @@ const Feature: React.FC = () => {
         <div className="container mx-auto px-3 md:px-10">
           <div className="px-5 py-10">
             <p className="font-circular-web text-lg dark:text-blue-50 font-robert-medium">
-              Into the Metagame Layer
+              Into the Metagame Layer  
             </p>
             <p className="max-x-md font-circular-web text-lg dark:text-blue-50 opacity-50">
               Immerse yourself in a rich and ever-expanding universe where a vibrant
