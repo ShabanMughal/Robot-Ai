@@ -36,6 +36,9 @@
   background-color: var(--secendary);
   color: var(--foreground);
 }
+.secondary-border{
+  border: 2px solid var(--secendary);
+}
 
 @keyframes spin {
   0% {
@@ -143,7 +146,7 @@
   }
 
   .bento-tilt_1 {
-    @apply relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    @apply relative secondary-border col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
   }
 
   .bento-tilt_2 {

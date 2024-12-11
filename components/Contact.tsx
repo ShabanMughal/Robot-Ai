@@ -55,12 +55,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="relative  bg-[#fff] dark:bg-[#594F4E] text-white" id="contact">
+    <div className="relative  bg-body transition-colors duration-500" id="contact">
       {/* Section Title */}
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[20px] dark:text-white"
         >
           Contact Us for More Information
         </h2>
@@ -75,7 +75,7 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
+                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 dark:text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
               />
               <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </div>
@@ -84,7 +84,7 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Your message..."
-                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
+                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 dark:text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
               />
               <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </div>
@@ -96,7 +96,7 @@ const Contact = () => {
         {/* 3D Model Section */}
         <div className="w-full md:w-1/2 flex items-center justify-center relative">
           <SecondRobot />
-          <div className="absolute w-[150px] h-10 bg-black right-5 bottom-5"></div>
+          <div className="absolute w-[150px] h-10 bg-body right-5 bottom-5"></div>
         </div>
       </div>
     </div>

@@ -78,20 +78,20 @@ const About = () => {
   }, [cursorImage]); 
 
   return (
-    <div className="relative bg-black" id="about">
+    <div className="relative bg-white dark:bg-black" id="about">
       <div className="pb-8 flex flex-col items-center gap-5">
         {/* Sub-heading */}
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[20px] dark:text-white"
         >
           About reimagine ai system
         </h2>
       </div>
 
       <div className="px-5 py-12">
-        <p className="font-circular-web text-lg text-blue-50">AI Programs at Your Service</p>
-        <p className="max-x-md font-robert text-lg text-blue-50 opacity-50">
+        <p className="font-circular-web text-lg dark:text-blue-50">AI Programs at Your Service</p>
+        <p className="max-x-md font-robert text-lg dark:text-blue-50 opacity-50">
           Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to{' '}
           <strong>Analyze</strong> vast data streams, <strong>Generate</strong> innovative ideas,{' '}
           <strong>Fix</strong> complex problems, and <strong>Adapt</strong> in real time, these
@@ -123,12 +123,12 @@ const About = () => {
             <div className="absolute inset-0 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
 
             <div className="w-[100%] z-10">
-              <h3 className="font-zentry text-7xl text-blue-50 font-zentry special-font">
+              <h3 className="font-zentry text-7xl dark:text-blue-50 font-zentry special-font">
                 {feature.title}
               </h3>
             </div>
             <div className="w-[100%] z-10">
-              <p className="font-circular-web text-lg text-blue-50 opacity-50 text-end">
+              <p className="font-circular-web text-lg dark:text-blue-50 opacity-50 text-end">
                 {feature.description}
               </p>
             </div>
