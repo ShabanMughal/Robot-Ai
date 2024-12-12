@@ -1,31 +1,54 @@
+'use client'
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { FiMoon, FiSun } from "react-icons/fi";
+import { useWindowScroll } from 'react-use';
+import gsap from "gsap";
 
 // Define the navigation items
 const navItems = ["features", "tools", "programs", "about", "Contact"];
 
 const Navbar: React.FC = () => {
-  const [theme, setTheme] = useState<string>("light"); // State to manage theme
 
   // Define refs with the correct types
   const navContainer = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const [isNavVisible, setIsNavVisible] = useState<boolean>(true);
 
-  // Toggle theme function
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-    localStorage.setItem("theme", newTheme); // Persist theme choice
-    handleMouseEnter()
-  };
+  // Destructure the current scroll position from useWindowScroll
+  const { y: currentScrollY } = useWindowScroll();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
-  }, []);
+    // Handle scroll behavior
+    if (currentScrollY === 0) {
+      setIsNavVisible(true);
+      if (navContainer.current) {
+        navContainer.current.classList.remove('floating-nav');
+      }
+    } else if (currentScrollY > lastScrollY) {
+      setIsNavVisible(false);
+      if (navContainer.current) {
+        navContainer.current.classList.add('floating-nav');
+      }
+    } else if (currentScrollY < lastScrollY) {
+      setIsNavVisible(true);
+      if (navContainer.current) {
+        navContainer.current.classList.add('floating-nav');
+      }
+    }
+    setLastScrollY(currentScrollY);
+  }, [currentScrollY, lastScrollY]);
+
+  useEffect(() => {
+    // Animate navbar visibility
+    if (navContainer.current) {
+      gsap.to(navContainer.current, {
+        y: isNavVisible ? 0 : -100,
+        opacity: isNavVisible ? 1 : 0,
+        duration: 0.2
+      });
+    }
+  }, [isNavVisible]);
 
   const handleMouseEnter = () => {
     if (audioRef.current) {
@@ -37,7 +60,7 @@ const Navbar: React.FC = () => {
   return (
     <div
       ref={navContainer}
-      className="absolute inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
     >
       <audio ref={audioRef} src="/audio/robo.wav" preload="auto" />
       <header className="absolute top-1/2 w-full -translate-y-1/2">
@@ -45,42 +68,27 @@ const Navbar: React.FC = () => {
           <div className="flex items-center gap-7">
             <Image
               src="/logo.svg"
-              width={10}
-              height={10}
+              width={40}  // Ensure image width and height are appropriate for your layout
+              height={40}
               alt="logo"
               className="w-10"
             />
           </div>
 
-          <div className="flex h-full items-center">
+          <div className="flex h-full items-center mr-10">
             <div className="hidden md:block">
               {navItems.map((item) => (
                 <a
                   key={item}
                   onMouseEnter={handleMouseEnter}
                   href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn text-[#1C1C1E] dark:text-[#E5E5E5]"
+                  className="nav-hover-btn text-[#E5E5E5]"
                 >
                   {item}
                 </a>
               ))}
             </div>
 
-            {/* Theme Toggle Button */}
-            <button
-              className={`relative z-10 w-fit ml-5 cursor-pointer overflow-hidden rounded-full btn transition-colors  px-7 py-3`}
-              onClick={toggleTheme}
-            >
-              {/* Container for animations */}
-              <div className="relative flex flex-col items-center justify-center overflow-hidden">
-                {/* Upper Layer (Default Text and Icon) */}
-                <div className=" transition-transform duration-300 ease flex items-center space-x-2">
-                  <span className="font-general text-xs uppercase text-white">
-                    {theme === "light" ? <FiSun /> : <FiMoon />}
-                  </span>
-                </div>
-              </div>
-            </button>
           </div>
         </nav>
       </header>

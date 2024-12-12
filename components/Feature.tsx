@@ -111,21 +111,21 @@ const Feature: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative bg-white dark:bg-black trasnit duration-500" id="features">
+    <div className="min-h-screen relative bg-black trasnit duration-500" id="features">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[10px] dark:text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[10px] text-white"
         >
           Welcome to the future of AI
         </h2>
 
         <div className="container mx-auto px-3 md:px-10">
           <div className="px-5 py-10">
-            <p className="font-circular-web text-lg dark:text-blue-50 font-robert-medium">
+            <p className="font-circular-web text-lg text-blue-50 font-robert-medium">
               Into the Metagame Layer  
             </p>
-            <p className="max-x-md font-circular-web text-lg dark:text-blue-50 opacity-50">
+            <p className="max-x-md font-circular-web text-lg text-blue-50 opacity-50">
               Immerse yourself in a rich and ever-expanding universe where a vibrant
               array of products converge into an interconnected overlay experience in
               your world.

@@ -41,13 +41,13 @@ const Button = ({
         <div className="relative flex flex-col items-center justify-center overflow-hidden">
           {/* Upper Layer (Default Text and Icon) */}
           <div className="group-hover:translate-y-[-100%] transition-transform duration-300 ease flex items-center space-x-2">
-            {leftIcon && <span>{leftIcon}</span>}
             <span className="font-general text-xs uppercase">{title}</span>
+            {leftIcon && <span>{leftIcon}</span>}
           </div>
           {/* Lower Layer (Text and Icon on Hover) */}
           <div className="absolute top-full group-hover:translate-y-[-100%] transition-transform duration-300 ease flex items-center space-x-2">
-            {leftIcon && <span>{leftIcon}</span>}
             <span className="font-general text-xs uppercase">{title}</span>
+            {leftIcon && <span>{leftIcon}</span>}
           </div>
         </div>
       </button>

@@ -8,14 +8,8 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-:root {
-  --background: #F5F5F5; 
-  --foreground: #1C1C1E; 
-  --accent: #007bff;
-  --secendary: #D1D5DB;
-}
 
-.dark {
+:root {
   --background: #121212; /* Dark mode background */
   --foreground: #E5E5E5; /* Dark mode text */
   --accent: #1E90FF; /* Dark mode accent (blue) */
@@ -51,6 +45,16 @@
   display: flex;
   align-items: start;
   justify-content: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 4px solid rgba(0, 209, 255, 0.3); /* Light Cyan */
+  border-top: 4px solid #00D1FF; /* Bright Cyan */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 
@@ -112,7 +116,7 @@
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 after:bg-white cursor-pointer;
   }
 
   .floating-nav {

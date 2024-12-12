@@ -55,12 +55,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="relative  bg-body transition-colors duration-500" id="contact">
+    <div className="relative  bg-black transition-colors duration-500" id="contact">
       {/* Section Title */}
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[20px] dark:text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
         >
           Contact Us for More Information
         </h2>
@@ -96,7 +96,7 @@ const Contact = () => {
         {/* 3D Model Section */}
         <div className="w-full md:w-1/2 flex items-center justify-center relative">
           <SecondRobot />
-          <div className="absolute w-[150px] h-10 bg-body right-5 bottom-5"></div>
+          <div className="absolute w-[150px] h-10 bg-black right-5 bottom-5"></div>
         </div>
       </div>
     </div>

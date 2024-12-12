@@ -74,10 +74,11 @@ const Tools: React.FC = () => {
             // Animate each word sequentially
             tl.fromTo(
               wordSpans,
-              { opacity: 0.3 },
+              { opacity: 0, y: 10 },
               {
                 opacity: 1,
-                stagger: 0.2,
+                y: 0,
+                stagger: 1,
                 duration: 0.5,
                 ease: 'power4.out',
               }
