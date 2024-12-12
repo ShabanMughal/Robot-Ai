@@ -40,6 +40,20 @@
   border: 2px solid var(--secendary);
 }
 
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

@@ -113,7 +113,7 @@ const Programs: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative  bg-body duration-500 transition-colors" id="programs">
+    <div className="relative bg-white dark:bg-black duration-500 transition-colors" id="programs">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}

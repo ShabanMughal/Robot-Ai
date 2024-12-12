@@ -135,7 +135,7 @@ const Feature: React.FC = () => {
           <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
             <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
               <BentoCard
-                src="images/362578cf-6bfb-477b-ac0c-1b44991c8ffd.jpg"
+                src="images/feature-1.jpg"
                 title={
                   <>
                     zig<b>m</b>a
@@ -147,7 +147,7 @@ const Feature: React.FC = () => {
             </BentoTilt>
             <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
               <BentoCard
-                src="videos/feature-3.mp4"
+                src="images/8677850c-e8ce-4691-bfea-5166a105c620.jpg"
                 title={
                   <>
                     n<b>e</b>xus
@@ -160,7 +160,7 @@ const Feature: React.FC = () => {
 
             <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
               <BentoCard
-                src="videos/feature-4.mp4"
+                src="images/feature-3.jpg"
                 title={
                   <>
                     az<b>u</b>xl
