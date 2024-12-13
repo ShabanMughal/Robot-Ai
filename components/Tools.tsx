@@ -78,7 +78,7 @@ const Tools: React.FC = () => {
               {
                 opacity: 1,
                 y: 0,
-                stagger: 1,
+                stagger: 0.3,
                 duration: 0.5,
                 ease: 'power4.out',
               }
