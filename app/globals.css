@@ -57,6 +57,19 @@
   animation: spin 1s linear infinite;
 }
 
+.left-image, .right-image {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+.left-image {
+  left: -200px; /* Start off-screen to the left */
+}
+
+.right-image {
+  right: -200px; /* Start off-screen to the right */
+}
 
 
 @keyframes spin {
@@ -166,30 +179,15 @@
   }
 
   .bento-tilt_1 {
-    @apply relative secondary-border col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    @apply relative secondary-border overflow-hidden rounded-md transition-transform duration-300 ease-out w-full;
   }
 
   .bento-tilt_2 {
-    @apply relative col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    @apply relative overflow-hidden rounded-md transition-transform duration-300 ease-out;
   }
 
   .bento-title {
     @apply uppercase md:text-6xl text-4xl font-black font-zentry;
-  }
-
-  .story-img-container {
-    @apply relative md:h-dvh h-[90vh] w-full;
-    filter: url("#flt_tag");
-  }
-
-  .story-img-mask {
-    @apply absolute left-0 top-0 size-full overflow-hidden md:left-[20%] md:top-[-10%] md:size-4/5;
-    clip-path: polygon(4% 0, 83% 21%, 100% 73%, 0% 100%);
-  }
-
-  .story-img-content {
-    @apply absolute w-full md:h-dvh h-[50dvh] opacity-100 left-10 top-16 md:left-0 md:top-10 lg:left-[-300px] lg:top-[-100px];
-    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0) rotateZ(0) scale(1);
   }
 
   .gallery-img-container {
@@ -202,18 +200,6 @@
 
   .gallery-img-4 {
     @apply sm:size-80 md:h-96 md:w-[25rem] rounded-lg;
-  }
-
-  .sword-man-clip-path {
-    clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
-  }
-
-  .contact-clip-path-1 {
-    clip-path: polygon(25% 0%, 74% 0, 69% 64%, 34% 73%);
-  }
-
-  .contact-clip-path-2 {
-    clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
   }
 }
 

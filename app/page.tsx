@@ -14,12 +14,12 @@ export default function Home() {
   return (
    <section className="overflow-hidden transition-colors duration-200">
     <Navbar />
-     {/* <Hero />  */}
+     <Hero /> 
      <Feature />  
-     {/* <Tools /> */}
-    {/* <Programs /> */}
-    {/* <About />  */}
-    {/* <Contact /> */}
+     <Tools />
+    <Programs />
+    <About /> 
+    <Contact />
     <LandbotChat />
    </section>
   );
