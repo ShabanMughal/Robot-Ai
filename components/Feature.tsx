@@ -131,8 +131,31 @@ const Feature: React.FC = () => {
               your world.
             </p>
           </div>
+          {/* continue from here */}
+          <div className='flex justify-center gap-5'>
+            <div className='bg-blue-400 h-[70vh] w-[80vw] rounded-lg flex items-center justify-center'>
+              
+              <div>
+                <h1>Code modren</h1>
+                <ul>
+                  <li>language learning</li>
+                  <li>language learning</li>
+                  <li>language learning</li>
+                </ul>
 
-          <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
+              </div>
+              <div>
+                <img src="https://api.deepai.org/job-view-file/2ae63d9c-82a6-4431-a773-9fcdad9b309c/outputs/output.jpg?art-image=true" alt="" className='w-[300px]' />
+             
+              </div>
+            </div>
+            <div className='bg-blue-400 h-[70vh] w-[10vw] rounded-lg'>
+            </div>
+            <div className='bg-blue-400 h-[70vh] w-[10vw] rounded-lg'>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-7 mt-10">
             <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
               <BentoCard
                 src="images/feature-1.jpg"
@@ -169,17 +192,6 @@ const Feature: React.FC = () => {
                 description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
                 button={true}
               />
-            </BentoTilt>
-
-            <BentoTilt className="bento-tilt_1">
-              <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-                <div>
-                  <h1 className="bento-title special-font">
-                    M<b>o</b>re co<b>m</b>ing s<b>o</b>on!
-                  </h1>
-                </div>
-                <TiLocationArrow className="m-5 scale-[5] self-end" />
-              </div>
             </BentoTilt>
           </div>
         </div>

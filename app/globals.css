@@ -58,6 +58,7 @@
 }
 
 
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -110,6 +111,7 @@
   }
 }
 
+
 @layer utilities {
   .border-hsla {
     @apply border border-white/20;
@@ -120,7 +122,7 @@
   }
 
   .floating-nav {
-    @apply bg-black rounded-lg border;
+    @apply bg-transparent backdrop-blur-lg rounded-lg border;
   }
 
   .absolute-center {
