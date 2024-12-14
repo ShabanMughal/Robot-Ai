@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { TiLocationArrow } from "react-icons/ti";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Button from "./Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
