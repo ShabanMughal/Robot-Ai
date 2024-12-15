@@ -3,9 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useWindowScroll } from 'react-use';
 import gsap from "gsap";
+import { FaBars } from "react-icons/fa";
 
 // Define the navigation items
-const navItems = ["features", "tools", "programs", "about", "Contact"];
+const navItems = ["features", "programs", "tools", "about", "Contact"];
 
 const Navbar: React.FC = () => {
 
@@ -89,6 +90,9 @@ const Navbar: React.FC = () => {
               ))}
             </div>
 
+          </div>
+          <div className="text-white block md:hidden">
+            <FaBars />
           </div>
         </nav>
       </header>

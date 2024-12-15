@@ -69,7 +69,7 @@ const Hero = () => {
       <Robot onLoad={handleModelLoad} /> {/* Pass the onLoad handler to Robot */}
 
       {!loading && (
-        <div className="absolute left-0 top-36" id="hero">
+        <div className="absolute left-0 bottom-36 md:top-36" id="hero">
           <div className="px-5 sm:px-10">
             <h1 className="special-font hero-heading">
               reim<b>a</b>gi<b>n</b>e

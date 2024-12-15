@@ -5,8 +5,8 @@ import Feature from "@/components/Feature";
 import Hero from "@/components/Hero";
 import LandbotChat from "@/components/LandbotChat";
 import Navbar from "@/components/Navbar";
-import Programs from "@/components/Programs";
 import Tools from "@/components/Tools";
+import Programs from "@/components/Programs";
 
 
 export default function Home() {
@@ -16,8 +16,8 @@ export default function Home() {
     <Navbar />
      <Hero /> 
      <Feature />  
-     <Tools />
-    <Programs />
+     <Programs />
+    <Tools />
     <About /> 
     <Contact />
     <LandbotChat />

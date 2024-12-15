@@ -60,10 +60,12 @@ const BentoCard: React.FC<BentoCardProps> = ({
 }) => {
   return (
     <div className={`relative size-full p-5`}>
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col p-5 text-blue-50">
         <div className="flex justify-between">
           <h1 className="bento-title special-font">{title}</h1>
-          <div className={`flex justify-center items-center w-10 h-10 rounded-lg ${bgColor}`}>
+          <div
+            className={`flex justify-center items-center w-10 h-10 rounded-lg ${bgColor}`}
+          >
             <img src={src} alt="icon" className="w-5" />
           </div>
         </div>
@@ -133,29 +135,29 @@ const Feature: React.FC = () => {
 
   const cards = [
     {
-      title: "Data Engineering + Analysis",
+      title: "AI-Powered Robotics",
       description: [
-        "1. Data warehouse migrations",
-        "2. ETL development",
-        "3. Data cleaning and preprocessing",
+        "1. Autonomous decision-making",
+        "2. Real-time environment adaptation",
+        "3. Human-like interaction and learning",
       ],
       image: "https://via.placeholder.com/600x400",
     },
     {
-      title: "AI Solutions",
+      title: "Machine Learning for Robots",
       description: [
-        "1. Custom AI Model Training",
-        "2. Real-time Data Insights",
-        "3. Predictive Analytics",
+        "1. Predictive behavior models",
+        "2. Self-improvement algorithms",
+        "3. Seamless integration with IoT",
       ],
       image: "https://via.placeholder.com/600x400",
     },
     {
-      title: "Web3 & Blockchain",
+      title: "Robotic Process Automation (RPA)",
       description: [
-        "1. Smart Contract Development",
-        "2. Decentralized Applications",
-        "3. Blockchain Integration",
+        "1. Task automation for businesses",
+        "2. Intelligent data handling",
+        "3. Enhanced productivity through AI",
       ],
       image: "https://via.placeholder.com/600x400",
     },
@@ -164,33 +166,40 @@ const Feature: React.FC = () => {
   return (
     <div className="min-h-screen relative bg-black">
       <div className="pb-8 flex flex-col items-center gap-5">
-        <h2 className="font-general pt-16 text-sm uppercase md:text-[10px] text-white">
-          Welcome to the future of AI
+        <h2 className="font-general pt-16 text-lg uppercase text-white">
+          Welcome to the Future of Robotics
         </h2>
 
         <div className="container mx-auto px-3 md:px-10">
           <div className="px-5 py-10">
             <p className="font-circular-web text-lg text-blue-50 font-robert-medium">
-              Into the Metagame Layer
+              AI-Driven Robot Technologies
             </p>
             <p className="max-x-md font-circular-web text-lg text-blue-50 opacity-50">
-              Immerse yourself in a rich and ever-expanding universe where a
-              vibrant array of products converge into an interconnected overlay
-              experience in your world.
+              Experience cutting-edge robotics with AI capabilities that enhance
+              productivity, decision-making, and automation in various
+              industries.
             </p>
           </div>
 
           {/* Hover Card */}
-          <div className="flex w-full gap-4">
+          <div className="flex flex-col md:flex-row w-full gap-4">
             {cards.map((card, index) => (
               <div
                 key={index}
                 onMouseEnter={() => handleCardClick(index)}
-                className={`relative flex justify-between bg-blue-400 items-center transition-all duration-700 ease rounded-lg overflow-hidden px-16 ${
-                  activeIndex === index
-                    ? "w-[80%] opacity-100"
-                    : "w-[10%] opacity-50"
-                } h-[70vh]`}
+                className={`relative flex justify-between bg-blue-400 items-center rounded-lg overflow-hidden px-4 md:px-16 
+        ${
+          activeIndex === index
+            ? "w-full md:w-[80%] opacity-100"
+            : "w-full md:w-[10%] opacity-50"
+        }
+        ${
+          activeIndex === index
+            ? "h-[50vh] md:h-[70vh]"
+            : "md:h-[70vh] h-[10vh] opacity-50"
+        }`}
+                style={{ transition: "height 0.7s ease, width 0.7s ease" }}
               >
                 {activeIndex === index && (
                   <>
@@ -238,17 +247,22 @@ const Feature: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-5 mt-10 w-full">
+          <div className="flex md:flex-row flex-col justify-center gap-5 mt-10 w-full px-16 md:px-0">
             <BentoTilt className="bento-tilt_1">
               <BentoCard
                 src="/logo.svg"
                 title={
                   <>
-                    <b>zigm</b>a
+                    <b>AI</b> Bot
                   </>
                 }
                 bgColor="bg-blue-500" // Example background color
-                listData={["Feature 1", "Feature 2", "Feature 3"]}
+                listData={[
+                  "Autonomous decisions",
+                  "Natural language processing",
+                  "Real-time learning",
+                ]}
+                description="An intelligent AI bot designed to assist with real-time problem-solving, automate routine tasks, and enhancing productivity."
               />
             </BentoTilt>
             <BentoTilt className="bento-tilt_1">
@@ -256,12 +270,16 @@ const Feature: React.FC = () => {
                 src="/logo.svg"
                 title={
                   <>
-                    <b>nex</b>us
+                    <b>Robot</b>{" "}
                   </>
                 }
                 bgColor="bg-blue-700"
-                listData={["Gamified interaction", "Web3 Communities"]}
-                description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+                listData={[
+                  "Task automation",
+                  "Data processing",
+                  "Human-robot collaboration",
+                ]}
+                description="A robot assistant powered by AI, designed to improve workplace efficiency and support a wide range of tasks."
               />
             </BentoTilt>
 
@@ -270,12 +288,16 @@ const Feature: React.FC = () => {
                 src="/logo.svg"
                 title={
                   <>
-                    <b>az</b>uxl
+                    <b>RPA</b>
                   </>
                 }
                 bgColor="bg-blue-800"
-                listData={["AI Agent", "Enhanced gameplay"]}
-                description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+                listData={[
+                  "Seamless automation",
+                  "AI-driven insights",
+                  "Cross-platform support",
+                ]}
+                description="AI-powered RPA system to automate business processes, optimizing workflows and boosting productivity."
               />
             </BentoTilt>
           </div>
