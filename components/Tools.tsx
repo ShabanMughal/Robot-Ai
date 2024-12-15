@@ -15,9 +15,9 @@ const AnimCard: React.FC<AnimateCardProps>=({ icon, platform, containerClass})=>
 
   return(
     <>
-   <div className={`relative w-[200px] h-[350px] cursor-pointer bg-zinc-500 rounded-lg flex flex-col justify-center items-center py-5 group overflow-hidden ${containerClass}`}>
+   <div className={`relative w-[150px] md:w-[200px] h-[250px] md:h-[300px] cursor-pointer bg-zinc-500 rounded-lg flex flex-col justify-center items-center py-5 group overflow-hidden ${containerClass}`}>
   {/* Background */}
-  <div className="absolute inset-0 bg-zinc-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
   {/* Heading */}
   <h2 className="absolute top-[-50px] text-white font-bold group-hover:top-5 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
@@ -25,7 +25,7 @@ const AnimCard: React.FC<AnimateCardProps>=({ icon, platform, containerClass})=>
   </h2>
 
   {/* Icon */}
-  <div className="text-5xl text-white z-10">
+  <div className="text-3xl md:text-5xl text-white z-10 opacity-50 group-hover:opacity-100">
   {icon}
   </div>
 
@@ -166,12 +166,12 @@ const Tools: React.FC = () => {
           <AnimCard platform='Gaming AI' icon={<FaGamepad />} />
           </div>
         <div className='mt-[20%] flex flex-col gap-3 trigger-3'>
-          <AnimCard platform='OpenAI' icon={<FaBrain />} containerClass='!h-[200px]' />
+          <AnimCard platform='OpenAI' icon={<FaBrain />}  />
           <AnimCard platform='Amazon AWS' icon={<FaAmazon />} />
           <AnimCard platform='Microsoft Azure' icon={<FaMicrosoft />} containerClass='!h-[200px]' />
           </div>
         <div className='mt-[20%] flex flex-col gap-3 trigger-3'>
-          <AnimCard platform='GitHub Copilot' icon={<FaGithub />} containerClass='!h-[200px]' />
+          <AnimCard platform='GitHub Copilot' icon={<FaGithub />} />
           <AnimCard platform='Apple Siri' icon={<FaApple />} />
           <AnimCard platform='Google Bard' icon={<FaGoogle />} containerClass='!h-[200px]' />
           </div>

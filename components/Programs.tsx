@@ -15,13 +15,13 @@ interface Tool {
 
 const ToolsData: Tool[] = [
   {
-    title: 'AI-Powered Learning: Your Personal Assistant',
+    title: 'Your Personal Assistant',
     description:
       `Artificial Intelligence is revolutionizing how we learn. AI tools offer personalized learning experiences, adapting to each individual's pace and preferences. Whether it's self-paced learning, coding tutorials, or even technical problem-solving, AI helps learners at all levels. With features like real-time feedback, AI-driven assessments, and adaptive learning paths, mastering new skills has never been easier. Embrace AI to enhance your learning journey and explore new frontiers of knowledge.`,
     image: 'images/feature-2.jpg',
   },
   {
-    title: 'AI Robots: Transforming Industries',
+    title: 'Transforming Industries',
     description:
       `AI robots are transforming industries by taking over repetitive tasks, improving efficiency, and enabling new levels of automation. These robots are equipped with machine learning algorithms and advanced sensors, enabling them to perform complex tasks across various fields, from manufacturing to healthcare. With human-robot collaboration on the rise, AI-powered robots are revolutionizing the workforce, allowing humans to focus on higher-level, creative tasks while robots handle the mundane.`,
     image: 'images/tool-1.jpg',
@@ -33,7 +33,7 @@ const ToolsData: Tool[] = [
     image: 'images/tool-2.jpg',
   },
   {
-    title: 'AI for Global Change: Empowering Solutions',
+    title: 'Empowering Solutions',
     description:
       `AI is at the forefront of solving some of the world’s most pressing challenges. From combatting climate change to improving disaster response, AI tools are helping humanity make significant strides in addressing global issues. For example, predictive models powered by AI can forecast natural disasters, enabling timely evacuations and resource distribution. In the field of healthcare, AI is driving advancements in diagnostics and personalized medicine, improving the quality of life worldwide.`,
     image: 'images/tool-3.jpg',
@@ -91,7 +91,7 @@ const Programs: React.FC = () => {
   
 
   return (
-    <div className="relative bg-body transition-colors px-10">
+    <div className="relative bg-body transition-colors px-5 md:px-10 pb-10">
        <div className="text-center pt-16 pb-10">
         <h1 className="text-4xl font-bold text-blue-700">AI & Robot Programs: Shaping the Future</h1>
         <p className="text-lg text-gray-600 mt-4">
@@ -102,12 +102,12 @@ const Programs: React.FC = () => {
         <div
         ref={(el) => { sectionsRef.current[index] = el; }}
           key={index}
-          className={`section flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8 px-2 md:px-8 py-2 md:py-16 min-h-screen`}
+          className={`section md:flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8 px-2 md:px-8 py-2 md:py-16 min-h-[50vh] md:min-h-screen hidden`}
         >
           <img
             src={tool.image}
             alt={`Section ${index + 1}`}
-            className="h-[500px] object-cover w-[200px] md:w-[100%]"
+            className="h-[500px] object-cover hidden md:block w-[100%]"
           />
           <div className="w-[100%]">
             <h1 className="bento-title special-font">

@@ -71,9 +71,9 @@ const Hero = () => {
       {!loading && (
         <div className="absolute left-0 bottom-36 md:top-36" id="hero">
           <div className="px-5 sm:px-10">
-            <h1 className="special-font hero-heading">
-              reim<b>a</b>gi<b>n</b>e
-            </h1>
+          <h1 className="special-font hero-heading text-transparent bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text">
+  reim<b>a</b>gi<b>n</b>e
+</h1>
             <p className="mb-5 max-w-64 font-robert-regular">
               Discover AI-powered robotics <br /> Shape the future of automation.
             </p>
@@ -81,7 +81,7 @@ const Hero = () => {
               id="explore-ai"
               title="Explore AI"
               leftIcon={<GoArrowUpRight aria-label="Arrow Icon" />}
-              containerClass="flex-center gap-1 hover:scale-105 transition-transform"
+              containerClass="flex-center gap-1 hover:scale-105 transition-transform bg-gradient-to-r from-blue-400 to-teal-500"
             />
           </div>
         </div>
@@ -90,7 +90,7 @@ const Hero = () => {
       {/* Marquee container */}
       <div
         id="marquee"
-        className="absolute bottom-0 w-full h-20 secondary overflow-hidden transition-colors duration-500"
+        className="absolute bottom-0 w-full h-20 bg-gradient-to-r from-blue-400 to-teal-500 overflow-hidden transition-colors duration-500"
       >
         <div
           ref={marqueeRef}

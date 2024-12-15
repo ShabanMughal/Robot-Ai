@@ -55,9 +55,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="relative  bg-black transition-colors duration-500" id="contact">
+    <div className="relative min-h-screen bg-black transition-colors duration-500" id="contact">
       {/* Section Title */}
-      <div className="pb-8 flex flex-col items-center gap-5">
+      <div className="md:pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
           className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
@@ -66,7 +66,7 @@ const Contact = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center px-5 py-12 gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-center px-5 py-12 gap-2 md:gap-10">
         {/* Form Section */}
         <div className="w-full md:w-1/2">
           <form ref={formRef} className="flex flex-col gap-8">
@@ -94,7 +94,7 @@ const Contact = () => {
         </div>
 
         {/* 3D Model Section */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative">
+        <div className="w-[100%] h-[300px] md:h-auto md:w-1/2 flex items-center justify-center relative">
           <SecondRobot />
           <div className="absolute w-[150px] h-10 bg-black right-5 bottom-5"></div>
         </div>

@@ -7,6 +7,7 @@ import LandbotChat from "@/components/LandbotChat";
 import Navbar from "@/components/Navbar";
 import Tools from "@/components/Tools";
 import Programs from "@/components/Programs";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <Tools />
     <About /> 
     <Contact />
+    <Footer />
     <LandbotChat />
    </section>
   );

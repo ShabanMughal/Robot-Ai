@@ -60,9 +60,9 @@ const BentoCard: React.FC<BentoCardProps> = ({
 }) => {
   return (
     <div className={`relative size-full p-5`}>
-      <div className="relative z-10 flex size-full flex-col p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col p-5 text-gray-100">
         <div className="flex justify-between">
-          <h1 className="bento-title special-font">{title}</h1>
+          <h1 className="bento-title special-font text-white">{title}</h1>
           <div
             className={`flex justify-center items-center w-10 h-10 rounded-lg ${bgColor}`}
           >
@@ -71,7 +71,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
         </div>
         <div className="mt-16 flex flex-col gap-3">
           {listData.map((item, index) => (
-            <h1 key={index} className="flex items-center">
+            <h1 key={index} className="flex items-center text-white">
               <div className={`w-3 h-3 ${bgColor} rounded-full mr-2`}></div>
               <span>{item}</span>
             </h1>
@@ -175,7 +175,7 @@ const Feature: React.FC = () => {
             <p className="font-circular-web text-lg text-blue-50 font-robert-medium">
               AI-Driven Robot Technologies
             </p>
-            <p className="max-x-md font-circular-web text-lg text-blue-50 opacity-50">
+            <p className="max-x-md font-circular-web text-lg  text-blue-50 opacity-50">
               Experience cutting-edge robotics with AI capabilities that enhance
               productivity, decision-making, and automation in various
               industries.
@@ -188,7 +188,7 @@ const Feature: React.FC = () => {
               <div
                 key={index}
                 onMouseEnter={() => handleCardClick(index)}
-                className={`relative flex justify-between bg-blue-400 items-center rounded-lg overflow-hidden px-4 md:px-16 
+                className={`relative flex justify-between bg-blue-700 items-center rounded-lg overflow-hidden px-4 md:px-16 
         ${
           activeIndex === index
             ? "w-full md:w-[80%] opacity-100"
@@ -220,12 +220,11 @@ const Feature: React.FC = () => {
 
                     <div>
                       <img
-                        className={`w-[300px] h-[300px] object-cover card-${index}`}
+                        className={`w-[300px] h-[300px] object-cover md:block hidden card-${index}`}
                         src={card.image}
                         alt={card.title}
                       />
                     </div>
-
                     <div className="absolute bottom-10 flex gap-3 w-full">
                       {cards.map((_, barIndex) => (
                         <div
@@ -247,7 +246,7 @@ const Feature: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex md:flex-row flex-col justify-center gap-5 mt-10 w-full px-16 md:px-0">
+          <div className="flex md:flex-row flex-col justify-center gap-5 mt-10 w-full">
             <BentoTilt className="bento-tilt_1">
               <BentoCard
                 src="/logo.svg"
@@ -256,7 +255,7 @@ const Feature: React.FC = () => {
                     <b>AI</b> Bot
                   </>
                 }
-                bgColor="bg-blue-500" // Example background color
+                bgColor="bg-blue-600" // Example background color
                 listData={[
                   "Autonomous decisions",
                   "Natural language processing",
@@ -291,7 +290,7 @@ const Feature: React.FC = () => {
                     <b>RPA</b>
                   </>
                 }
-                bgColor="bg-blue-800"
+                bgColor="bg-teal-500"
                 listData={[
                   "Seamless automation",
                   "AI-driven insights",

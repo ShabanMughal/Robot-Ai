@@ -23,7 +23,7 @@ const About = () => {
     },
     {
       title: <>Fi<b>x</b> Co<b>m</b>plex Pr<b>o</b>blems</>,
-      description: 'Solve intricate challenges by leveraging AI&apos;s problem-solving capabilities.',
+      description: "Solve intricate challenges by leveraging AI's problem-solving capabilities.",
       image: 'https://images.pexels.com/photos/844874/pexels-photo-844874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     },
     {
@@ -116,19 +116,19 @@ const About = () => {
         {AboutData.map((feature, index) => (
           <div
             key={index}
-            className="relative flex justify-between items-center border-b cursor-pointer py-5 px-10 group"
+            className="relative flex md:flex-row flex-col justify-between items-center border-b cursor-pointer py-5 px-10 group"
             onMouseEnter={() => setCursorImage(feature.image)}
             onMouseLeave={() => setCursorImage(null)}
           >
             <div className="absolute inset-0 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
 
             <div className="w-[100%] z-10">
-              <h3 className="font-zentry text-7xl text-blue-50 font-zentry special-font">
+              <h3 className="font-zentry text-3xl md:text-6xl text-blue-50 font-zentry special-font">
                 {feature.title}
               </h3>
             </div>
             <div className="w-[100%] z-10">
-              <p className="font-circular-web text-lg text-blue-50 opacity-50 text-end">
+              <p className="font-circular-web text-md md:text-lg text-blue-50 opacity-50 md:text-end">
                 {feature.description}
               </p>
             </div>
