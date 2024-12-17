@@ -14,22 +14,22 @@ const About = () => {
     {
       title: <>An<b>a</b>lyze <b>d</b>ata</>,
       description: 'Discover deep insights by analyzing massive data streams in real-time.',
-      image: 'https://images.pexels.com/photos/1036642/pexels-photo-1036642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.deepai.org/art-image/8ed07fb7c7ae4d08a36d4ff6a9bc8bdb/a-futuristic-data-analysis-scene-showcasing-a_iEzJQ1S.jpg',
     },
     {
       title: <>Ge<b>n</b>erate I<b>d</b>eas</>,
       description: 'Unlock creativity with AI-powered idea generation for any industry.',
-      image: 'https://images.pexels.com/photos/219701/pexels-photo-219701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.deepai.org/art-image/8292e9cc195842fcb23f5de53c164343/a-creative-and-innovative-workspace-filled-wi_IUc6SIk.jpg',
     },
     {
       title: <>Fi<b>x</b> Co<b>m</b>plex Pr<b>o</b>blems</>,
       description: "Solve intricate challenges by leveraging AI's problem-solving capabilities.",
-      image: 'https://images.pexels.com/photos/844874/pexels-photo-844874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.deepai.org/art-image/272fa0ef47d848b4888bf13204c2f7c4/a-futuristic-digital-environment-where-comple_9GfjUoi.jpg',
     },
     {
       title: <>Ad<b>a</b>pt i<b>n</b> Re<b>a</b>l-Ti<b>m</b>e</>,
       description: 'AI that evolves with real-time data, ensuring the best decision-making.',
-      image: 'https://images.pexels.com/photos/8294666/pexels-photo-8294666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.deepai.org/art-image/68ccea877aee4a5eb391fa4b5c1a6da5/a-futuristic-scene-showcasing-the-seamless-in_hcp5IT7.jpg',
     },
   ];
 
@@ -106,7 +106,7 @@ const About = () => {
           ref={cursorRef}
           src={cursorImage}
           alt="Cursor Image"
-          className="absolute pointer-events-none w-[250px] h-[300px] object-cover rounded-lg z-50"
+          className="absolute pointer-events-none w-[250px] h-[250px] object-cover rounded-lg z-50"
           style={{ transform: 'translate(-50%, -50%)' }}
         />
       )}

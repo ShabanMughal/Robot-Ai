@@ -13,9 +13,10 @@ const Navbar: React.FC = () => {
   // Define refs with the correct types
   const navContainer = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true);
-
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State to toggle the menu
   // Destructure the current scroll position from useWindowScroll
   const { y: currentScrollY } = useWindowScroll();
 
@@ -58,6 +59,29 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+  useEffect(() => {
+    if (menuRef.current) {
+      if (isMenuOpen) {
+        // Animate the menu sliding in from the right
+        gsap.fromTo(
+          menuRef.current,
+          { x: '100%', opacity: 0},
+          { x: 0, opacity:1, duration: 1, ease: 'power1.out' }
+        );
+      } else {
+        // Animate the menu sliding out to the right
+        gsap.to(menuRef.current, {
+          x: '100%',
+          opacity: 0,
+          duration: 1,
+          ease: 'power1.in',
+        });
+      }
+    }
+  }, [isMenuOpen]);
   return (
     <div
       ref={navContainer}
@@ -66,35 +90,54 @@ const Navbar: React.FC = () => {
       <audio ref={audioRef} src="/audio/robo.wav" preload="auto" />
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
+          {/* Logo */}
           <div className="flex items-center gap-7">
             <Image
               src="/logo.svg"
-              width={40}  // Ensure image width and height are appropriate for your layout
+              width={40}
               height={40}
               alt="logo"
               className="w-10"
             />
           </div>
 
-          <div className="flex h-full items-center mr-10">
-            <div className="hidden md:block">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  onMouseEnter={handleMouseEnter}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn text-[#E5E5E5]"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-
+          {/* Navigation Items (Desktop View) */}
+          <div className="hidden md:block">
+            {navItems.map((item) => (
+              <a
+                key={item}
+                onMouseEnter={handleMouseEnter}
+                href={`#${item.toLowerCase()}`}
+                className="nav-hover-btn text-[#E5E5E5]"
+              >
+                {item}
+              </a>
+            ))}
           </div>
+
+          {/* Bar Icon (Mobile View) */}
           <div className="text-white block md:hidden">
-            <FaBars />
+            <FaBars onClick={toggleMenu} className="cursor-pointer" />
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+       
+          <div
+          ref={menuRef}
+          className={`md:hidden flex text-white absolute top-1/2 ${isMenuOpen ? 'right-10': 'right-5'} -translate-y-1/2`}>
+            {navItems.map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 transition-all"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+       
       </header>
     </div>
   );

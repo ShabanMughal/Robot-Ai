@@ -141,7 +141,7 @@ const Feature: React.FC = () => {
         "2. Real-time environment adaptation",
         "3. Human-like interaction and learning",
       ],
-      image: "https://via.placeholder.com/600x400",
+      image: "images/feature-3.jpg",
     },
     {
       title: "Machine Learning for Robots",
@@ -150,7 +150,7 @@ const Feature: React.FC = () => {
         "2. Self-improvement algorithms",
         "3. Seamless integration with IoT",
       ],
-      image: "https://via.placeholder.com/600x400",
+      image: "https://images.deepai.org/art-image/5cf46b39478e4716a736ec53c77521b1/a-futuristic-machine-learning-robot-surrounde_r6NWy3s.jpg",
     },
     {
       title: "Robotic Process Automation (RPA)",
@@ -159,7 +159,7 @@ const Feature: React.FC = () => {
         "2. Intelligent data handling",
         "3. Enhanced productivity through AI",
       ],
-      image: "https://via.placeholder.com/600x400",
+      image: "https://images.deepai.org/art-image/3efd06fbc1cf4f70a45779f33c6ac927/a-cutting-edge-robot-representing-robotic-pro_2qBB3YB.jpg",
     },
   ];
 
