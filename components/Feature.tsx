@@ -171,11 +171,11 @@ const Feature: React.FC = () => {
         </h2>
 
         <div className="container mx-auto px-3 md:px-10">
-          <div className="px-5 py-10">
-            <p className="font-circular-web text-lg text-blue-50 font-robert-medium">
+          <div className="px-5 py-10 text-center">
+            <p className="text-4xl text-blue-50 font-robert-medium">
               AI-Driven Robot Technologies
             </p>
-            <p className="max-x-md font-circular-web text-lg  text-blue-50 opacity-50">
+            <p className="max-x-md font-circular-web text-lg  text-blue-50 opacity-50 mt-10">
               Experience cutting-edge robotics with AI capabilities that enhance
               productivity, decision-making, and automation in various
               industries.
@@ -188,7 +188,7 @@ const Feature: React.FC = () => {
               <div
                 key={index}
                 onMouseEnter={() => handleCardClick(index)}
-                className={`relative flex justify-between bg-blue-700 items-center rounded-lg overflow-hidden px-4 md:px-16 
+                className={`relative flex justify-between bg-body items-center bento-tilt_1 rounded-lg overflow-hidden px-4 md:px-16 
         ${
           activeIndex === index
             ? "w-full md:w-[80%] opacity-100"
@@ -205,12 +205,12 @@ const Feature: React.FC = () => {
                   <>
                     <div>
                       <h2
-                        className={`z-10 text-white text-2xl font-bold card-${index}`}
+                        className={`z-10 text-white text-2xl font-robert-medium card-${index}`}
                       >
                         {card.title}
                       </h2>
                       <ul
-                        className={`z-10 text-white text-sm mt-4 space-y-2 card-${index}`}
+                        className={`z-10 text-white text-sm mt-4 font-general space-y-2 card-${index}`}
                       >
                         {card.description.map((desc, i) => (
                           <li key={i}>{desc}</li>
@@ -220,7 +220,7 @@ const Feature: React.FC = () => {
 
                     <div>
                       <img
-                        className={`w-[300px] h-[300px] object-cover md:block hidden card-${index}`}
+                        className={`w-[300px] h-[300px] object-cover md:block hidden rounded-xl card-${index}`}
                         src={card.image}
                         alt={card.title}
                       />
@@ -255,7 +255,7 @@ const Feature: React.FC = () => {
                     <b>AI</b> Bot
                   </>
                 }
-                bgColor="bg-blue-600" // Example background color
+                bgColor="bg-blue-600"
                 listData={[
                   "Autonomous decisions",
                   "Natural language processing",

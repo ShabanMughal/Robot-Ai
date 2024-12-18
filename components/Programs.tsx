@@ -92,12 +92,19 @@ const Programs: React.FC = () => {
 
   return (
     <div className="relative bg-body transition-colors px-5 md:px-10 pb-10">
-       <div className="text-center pt-16 pb-10">
-        <h1 className="text-4xl font-bold text-blue-700">AI & Robot Programs: Shaping the Future</h1>
-        <p className="text-lg text-gray-600 mt-4">
-          Explore the transformative potential of AI and robotic technology in learning, work, and global change. Discover how these innovations are revolutionizing industries and enhancing human capabilities.
-        </p>
-      </div>
+      
+      <h2 className="font-general pt-16 text-lg uppercase text-white">
+          Welcome to the Future of Robotics
+        </h2>
+      <div className="px-5 py-10 text-center">
+            <p className="text-4xl text-blue-50 font-robert-medium">
+            AI & Robot Programs: Shaping the Future
+            </p>
+            <p className="max-x-md font-circular-web text-lg  text-blue-50 opacity-50 mt-10">
+            Explore the transformative potential of AI and robotic technology in learning, work, and global change. Discover how these innovations are revolutionizing industries and enhancing human capabilities.
+
+            </p>
+          </div>
       {ToolsData.map((tool, index) => (
         <div
         ref={(el) => { sectionsRef.current[index] = el; }}

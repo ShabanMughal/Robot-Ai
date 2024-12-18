@@ -34,19 +34,19 @@ const Button = ({
       {/* Button Component */}
       <button
         id={id}
-        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-lg btn transition-colors duration-500 px-7 py-3 text-white ${containerClass}`}
+        className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-lg btn transition-colors hover:bg-[#19B88A] duration-500 px-7 py-3 text-white ${containerClass}`}
         onClick={handleMouseEnter}
       >
         {/* Container for animations */}
         <div className="relative flex flex-col items-center justify-center overflow-hidden">
           {/* Upper Layer (Default Text and Icon) */}
           <div className="group-hover:translate-y-[-100%] transition-transform duration-300 ease flex items-center space-x-2">
-            <span className="font-general text-xs uppercase">{title}</span>
+            <span className="font-robert text-xs uppercase">{title}</span>
             {leftIcon && <span>{leftIcon}</span>}
           </div>
           {/* Lower Layer (Text and Icon on Hover) */}
           <div className="absolute top-full group-hover:translate-y-[-100%] transition-transform duration-300 ease flex items-center space-x-2">
-            <span className="font-general text-xs uppercase">{title}</span>
+            <span className="font-robert text-xs uppercase">{title}</span>
             {leftIcon && <span>{leftIcon}</span>}
           </div>
         </div>
