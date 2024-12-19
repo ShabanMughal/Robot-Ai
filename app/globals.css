@@ -8,50 +8,19 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --background: #121212;
-  --foreground: #E5E5E5; 
-  --accent: #1DC19C; 
-  --secendary: #333333;
-}
-
-
-.bg-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
-
-.btn {
-  background-color: var(--accent);
-  color: white;
-}
-.secondary{
-  background-color: var(--secendary);
-  color: var(--foreground);
-}
-.secondary-border{
-  border: 2px solid var(--secendary);
-}
-
 .word {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.section {
-  position: relative;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-}
 
 .loader {
   width: 50px;
   height: 50px;
   margin: 0 auto;
-  border: 4px solid rgba(0, 209, 255, 0.3); /* Light Cyan */
-  border-top: 4px solid #00D1FF; /* Bright Cyan */
+  border: 4px solid rgba(0, 209, 255, 0.3);
+  border-top: 4px solid #00D1FF;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -111,9 +80,6 @@
 
 
 @layer utilities {
-  .border-hsla {
-    @apply border border-white/20;
-  }
 
   .nav-hover-btn {
     @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 after:bg-black cursor-pointer;
@@ -123,18 +89,6 @@
     @apply bg-transparent backdrop-blur-lg rounded-lg border;
   }
 
-  .absolute-center {
-    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
-  }
-
-  .flex-center {
-    @apply flex justify-center items-center;
-  }
-
-  .mask-clip-path {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-
   .special-font b {
     font-family: "Zentry";
     font-feature-settings: "ss01" on;
@@ -142,14 +96,6 @@
 
   .hero-heading {
     @apply uppercase font-zentry font-black text-5xl sm:right-10 md:text-8xl lg:text-[6rem];
-  }
-
-  .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
-  }
-
-  .about-image {
-    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
   }
 
   .animated-title {
@@ -164,13 +110,8 @@
   }
 
   .bento-tilt_1 {
-    @apply relative border border-slate-400 overflow-hidden rounded-md transition-transform duration-300 ease-out w-full;
+    @apply relative border border-slate-300 overflow-hidden rounded-md transition-transform duration-300 ease-out w-full;
   }
-
-  .bento-tilt_2 {
-    @apply relative overflow-hidden rounded-md transition-transform duration-300 ease-out;
-  }
-
   .bento-title {
     @apply uppercase md:text-6xl text-3xl font-black font-zentry;
   }

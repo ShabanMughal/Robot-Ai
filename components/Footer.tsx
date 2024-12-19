@@ -3,13 +3,17 @@ import React from 'react'
 import Button from './Button';
 
 const Footer = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Submitted');
+  }
   return (
     <div className='bg-white flex justify-between items-center p-5 px-[100px]'>
       <div className=''>
         <p className='text-xl'>&copy; 2024 ReImagine. All rights reserved.</p>
       </div>
       <div className='flex gap-20'>
-      <form action="" className='flex gap-5'>
+      <form action="" className='flex gap-5' onSubmit={handleSubmit}>
       <div className="relative group form-input">
               <input
                 type="text"

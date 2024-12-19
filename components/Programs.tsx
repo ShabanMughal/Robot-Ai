@@ -37,7 +37,7 @@ const ToolsData: Tool[] = [
 const Programs: React.FC = () => {
   // UseRef for sections, define ref type as HTMLDivElement[]
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
     sectionsRef.current.forEach((section) => {
       if (section) {
@@ -82,12 +82,32 @@ const Programs: React.FC = () => {
       }
     });
   }, []);
+  useEffect(() => {
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: 'top 90%',
+            end: 'top 70%',
+            scrub: true,
+          },
+        }
+      );
+    }
+  }, []);
   
 
   return (
-    <div className="relative bg-white transition-colors px-5 md:px-10 pb-10">
+    <div className="relative bg-white transition-colors px-5 md:px-10 pb-10" id='programs'>
       
-      <h2 className="font-general pt-16 text-lg uppercase text-center">
+      <h2 className="font-general pt-16 text-lg uppercase text-center" ref={titleRef}>
       Discover the Cutting-Edge World of AI & Robotics
         </h2>
       <div className="px-5 py-10 text-center">
@@ -104,12 +124,14 @@ const Programs: React.FC = () => {
           key={index}
           className={`section md:flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8 px-2 md:px-8 py-2 md:py-16 min-h-[50vh] md:min-h-screen hidden`}
         >
-          <div className='hidden md:flex w-[100%]  bg-gradient-to-r from-blue-100 to-green-100 p-5 rounded-2xl shadow-lg justify-center items-center'>
+          <div className='hidden md:flex w-[100%] justify-center items-center'>
+          <div className='bg-blue-100 p-3 rounded-2xl shadow-xl'>
           <img
             src={tool.image}
             alt={`Section ${index + 1}`}
             className="object-cover rounded-2xl"
             />
+            </div>
             </div>
           <div className="w-[100%]">
             <h1 className="bento-title special-font">

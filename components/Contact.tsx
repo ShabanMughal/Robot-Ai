@@ -36,9 +36,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="relative h-full bg-gradient-to-r from-blue-100 to-green-100 transition-colors duration-500 pb-10" id="contact">
+    <div className="relative h-full bg-blue-100 transition-colors duration-500 pb-10" id="contact">
       {/* Section Title */}
-      <div className="pb-8 flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
           className="font-general pt-16 text-sm uppercase md:text-[20px]"
@@ -48,7 +48,7 @@ const Contact = () => {
       </div>
 
       {/* Subtitle Section */}
-      <div className="px-10 py-10 text-center">
+      <div className="px-10 pt-10 text-center">
         <p className="text-4xl font-robert-medium">
           Let AI <span className="bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">Empower</span> Your Vision
         </p>
@@ -67,12 +67,11 @@ const Contact = () => {
           <p className="text-lg text-gray-600 pb-10">
             Have questions or need detailed information? Feel free to reach out to us through email or our chatbot.
           </p>
-          
           {/* Mailto Button */}
           <a
             href="mailto:thandermughal@gmail.com?subject=Inquiry&body=Hello, I would like to know more about your services."
           >
-          <Button title={'Send Email'} id={'contact-btn'} leftIcon={<FaLocationArrow /> }  />
+          <Button title={'Send Email'} id={'contact-btn'} leftIcon={<FaLocationArrow /> } containerClass='!w-[250px] hover:scale-105 !h-[50px]' />
        
           </a>
           {/* Social Media Links */}
@@ -119,12 +118,12 @@ const Contact = () => {
         {/* Right Section: 3D Model */}
         <div className="w-full md:w-1/2 flex items-center justify-center relative">
           <SecondRobot />
-          <div className="absolute w-[150px] h-10 bg-gradient-to-r from-green-100 to-green-100 right-5 bottom-5"></div>
+          <div className="absolute w-[150px] h-10 bg-blue-100 right-5 bottom-5"></div>
         </div>
       </div>
 
       {/* Extra Content: Why Contact Us */}
-      <div className="bg-white rounded-lg shadow-md px-6 py-8 mt-10 mx-5 md:mx-20">
+      <div className="bg-white rounded-lg shadow-md px-6 py-8 mt-10 mx-5 md:mx-[200px]">
         <h3 className="text-2xl font-semibold text-center text-gray-800">Why Reach Out?</h3>
         <p className="mt-4 text-center text-gray-600">
           Our team of experts is dedicated to providing cutting-edge solutions. Whether you're curious about our AI capabilities, need assistance with our services, or want to collaborate on a groundbreaking project, we're here to help.

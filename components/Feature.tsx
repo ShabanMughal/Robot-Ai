@@ -85,7 +85,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
 const Feature: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const startCardTransition = () => {
     setProgress(0);
     let currentProgress = 0;
@@ -161,11 +161,31 @@ const Feature: React.FC = () => {
       image: "https://images.deepai.org/art-image/3efd06fbc1cf4f70a45779f33c6ac927/a-cutting-edge-robot-representing-robotic-pro_2qBB3YB.jpg",
     },
   ];
+  useEffect(() => {
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: 'top 90%',
+            end: 'top 70%',
+            scrub: true,
+          },
+        }
+      );
+    }
+  }, []);
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-r from-blue-100 to-green-100">
+    <div className="min-h-screen relative bg-blue-100" id="features">
       <div className="pb-8 flex flex-col items-center gap-5">
-        <h2 className="font-general pt-16 text-lg uppercase ">
+        <h2 className="font-general pt-16 text-lg uppercase" ref={titleRef}>
           Welcome to the Future of Robotics
         </h2>
 
@@ -265,7 +285,6 @@ const Feature: React.FC = () => {
             </BentoTilt>
             <BentoTilt className="bento-tilt_1">
               <BentoCard
-              
                 title={
                   <>
                     <b>Robot</b>{" "}

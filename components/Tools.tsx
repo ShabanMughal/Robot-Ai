@@ -137,7 +137,7 @@ const Tools: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-100 to-green-100 duration-500 transition-colors pb-10" id="programs">
+    <div className="relative bg-blue-100 duration-500 transition-colors pb-10" id="tools">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}

@@ -62,7 +62,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen overflow-hidden bg-white transition-colors duration-500">
       {loading && (
-        <div className="h-screen w-screen absolute bg-gradient-to-r from-blue-100 to-green-100 inset-0 flex justify-center items-center z-50">
+        <div className="h-screen w-screen absolute bg-blue-100 inset-0 flex justify-center items-center z-50">
           <div className="loader"></div> {/* Full-screen loader */}
         </div>
       )}
@@ -71,7 +71,7 @@ const Hero = () => {
       {!loading && (
         <div className="absolute left-0 bottom-36 md:top-36" id="hero">
           <div className="px-5 sm:px-10">
-          <h1 className="special-font hero-heading">
+          <h1 className="special-font hero-heading bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">
   reim<b>a</b>gi<b>n</b>e
 </h1>
             <p className="mb-5 max-w-64 font-robert-regular">
