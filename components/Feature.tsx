@@ -172,7 +172,7 @@ const Feature: React.FC = () => {
         <div className="container mx-auto px-3 md:px-10">
           <div className="px-5 py-10 text-center">
             <p className="text-4xl font-robert-medium">
-              AI-Driven Robot Technologies
+              AI-Driven Robot <span className="bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">Technologies</span>
             </p>
             <p className="max-x-md font-circular-web text-lg opacity-75 mt-10">
               Experience cutting-edge robotics with AI capabilities that enhance

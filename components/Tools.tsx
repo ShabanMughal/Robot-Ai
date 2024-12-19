@@ -137,7 +137,7 @@ const Tools: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-100 to-green-100 duration-500 transition-colors" id="programs">
+    <div className="relative bg-gradient-to-r from-blue-100 to-green-100 duration-500 transition-colors pb-10" id="programs">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
@@ -146,16 +146,19 @@ const Tools: React.FC = () => {
            Explore AI Tools
         </h2>
       </div>
-      <div className="px-5 py-12">
-        <p className="font-circular-web text-lg"> Discover the power of AI-driven tools transforming industries and everyday life.</p>
-        <p className="max-x-md font-robert text-lg opacity-75">
-        Dive deeper into how these tools work, their impact, and how they can help you stay ahead in an ever-changing technological world.        </p>
+      <div className="px-5 py-12 text-center">
+        <p className="text-4xl font-robert-mediuml"> Discover the power of <span className="bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">AI-driven</span> tools</p>
+        <p className="max-x-md font-circular-web text-lg opacity-75 mt-10">
+        Dive deeper into how these tools work, their impact, and how they can help you stay ahead in an ever-changing technological world.</p>
       </div>
 
       {/* devin animation section */}
       <div className='relative'>
       <div className='text-center' ref={motionRef}>
-        <h1 className="special-font hero-heading"><b>a</b>ble to w<b>o</b>rk<br /> with h<b>u</b>ndr<b>e</b>ds of t<b>00</b>ls</h1>
+        <h1 className="special-font hero-heading"><b>a</b>ble to w<b>o</b>rk<br /> with h<b>u</b>ndr<b>e</b>ds of <span className="bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">
+  t<b>00</b>ls
+</span>
+</h1>
       </div>
       <div className='flex gap-5 justify-center z-20' ref={cardsRef}>
         <div className='flex flex-col gap-3 trigger'>
@@ -191,18 +194,6 @@ const Tools: React.FC = () => {
       </div>
       </div>
 
-      <div>
-        <div className="flex flex-col items-center gap-5 pt-5 px-14 pb-16 mt-[200px]">
-          <div className="flex flex-col items-center gap-5">
-            <h3 className="font-general text-2xl">
-              AI Programs at Your Service
-            </h3>
-            <p className="text-sm ">
-              Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to analyze vast data streams, generate innovative ideas, fix complex problems, and adapt in real time, these intelligent systems are shaping the future. Prepare for a reality where technology isn&apos;t just a tool, but a partner in progress, transforming industries and enhancing lives.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

@@ -23,6 +23,9 @@ export default function Home() {
     <Contact />
     <Footer />
     <LandbotChat />
+    <div className="w-14 h-14 fixed bottom-5 shadow-2xl rounded-full right-7 bg-blue-600">
+
+    </div>
    </section>
   );
 }

@@ -89,9 +89,9 @@ const About = () => {
         </h2>
       </div>
 
-      <div className="px-5 py-12">
-        <p className="font-circular-web text-lg">AI Programs at Your Service</p>
-        <p className="max-x-md font-robert text-lg opacity-75">
+      <div className="px-10 py-12 text-center">
+        <p className="text-4xl font-robert-mediuml">AI Programs at Your <span className="bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent">Service</span></p>
+        <p className="max-x-md font-circular-web text-center text-lg opacity-75 mt-10">
           Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to{' '}
           <strong>Analyze</strong> vast data streams, <strong>Generate</strong> innovative ideas,{' '}
           <strong>Fix</strong> complex problems, and <strong>Adapt</strong> in real time, these

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Type definition for each tool
 interface Tool {
-  title: any;
+  title: React.ReactNode;
   description: string;
   image: string;
 }
@@ -92,7 +92,7 @@ const Programs: React.FC = () => {
         </h2>
       <div className="px-5 py-10 text-center">
             <p className="text-4xl font-robert-medium">
-            Transforming the Present. Innovating the Future.
+            Transforming the <span className='bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent'>Present.</span> Innovating the <span className='bg-gradient-to-r from-[#4795E4] to-[#3ABAD7] bg-clip-text text-transparent'>Future</span>.
             </p>
             <p className="max-x-md font-circular-web text-lg opacity-75 mt-10">
             Dive into the groundbreaking advancements in AI and robotics that are reshaping industries, empowering solutions, and optimizing workflows. Explore the tools shaping a smarter tomorrow today.
@@ -104,11 +104,13 @@ const Programs: React.FC = () => {
           key={index}
           className={`section md:flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8 px-2 md:px-8 py-2 md:py-16 min-h-[50vh] md:min-h-screen hidden`}
         >
+          <div className='hidden md:flex w-[100%]  bg-gradient-to-r from-blue-100 to-green-100 p-5 rounded-2xl shadow-lg justify-center items-center'>
           <img
             src={tool.image}
             alt={`Section ${index + 1}`}
-            className="h-[500px] object-cover hidden md:block w-[100%] rounded-2xl"
-          />
+            className="object-cover rounded-2xl"
+            />
+            </div>
           <div className="w-[100%]">
             <h1 className="bento-title special-font">
                {tool.title}
