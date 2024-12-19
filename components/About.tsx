@@ -78,20 +78,20 @@ const About = () => {
   }, [cursorImage]); 
 
   return (
-    <div className="relative bg-body" id="about">
+    <div className="relative bg-white" id="about">
       <div className="pb-8 flex flex-col items-center gap-5">
         {/* Sub-heading */}
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[20px] "
         >
           About reimagine ai system
         </h2>
       </div>
 
       <div className="px-5 py-12">
-        <p className="font-circular-web text-lg text-blue-50">AI Programs at Your Service</p>
-        <p className="max-x-md font-robert text-lg text-blue-50 opacity-50">
+        <p className="font-circular-web text-lg">AI Programs at Your Service</p>
+        <p className="max-x-md font-robert text-lg opacity-75">
           Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to{' '}
           <strong>Analyze</strong> vast data streams, <strong>Generate</strong> innovative ideas,{' '}
           <strong>Fix</strong> complex problems, and <strong>Adapt</strong> in real time, these
@@ -120,15 +120,15 @@ const About = () => {
             onMouseEnter={() => setCursorImage(feature.image)}
             onMouseLeave={() => setCursorImage(null)}
           >
-            <div className="absolute inset-0 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-r to-[#3ABAD7] from-[#4795E4] transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
 
             <div className="w-[100%] z-10">
-              <h3 className="font-zentry text-3xl md:text-6xl text-blue-50 font-zentry special-font">
+              <h3 className="font-zentry text-3xl md:text-6xl font-zentry special-font group-hover:text-white">
                 {feature.title}
               </h3>
             </div>
             <div className="w-[100%] z-10">
-              <p className="font-circular-web text-md md:text-lg text-blue-50 opacity-50 md:text-end">
+              <p className="font-circular-web text-md md:text-lg opacity-75 md:text-end group-hover:text-white transition-colors duration-200">
                 {feature.description}
               </p>
             </div>

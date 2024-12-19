@@ -15,9 +15,13 @@ const AnimCard: React.FC<AnimateCardProps>=({ icon, platform, containerClass})=>
 
   return(
     <>
-   <div className={`relative w-[150px] md:w-[200px] h-[250px] md:h-[300px] cursor-pointer bg-zinc-500 rounded-lg flex flex-col justify-center items-center py-5 group overflow-hidden ${containerClass}`}>
+   <div className={`relative w-[150px] md:w-[200px] h-[250px] md:h-[300px] cursor-pointer bg-slate-200 rounded-lg flex flex-col justify-center items-center py-5 group overflow-hidden ${containerClass}`}
+   style={{
+    boxShadow: "0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1)",
+  }}
+   >
   {/* Background */}
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div className="absolute inset-0 bg-gradient-to-r to-[#3ABAD7] from-[#4795E4] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
   {/* Heading */}
   <h2 className="absolute top-[-50px] text-white font-bold group-hover:top-5 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
@@ -25,7 +29,7 @@ const AnimCard: React.FC<AnimateCardProps>=({ icon, platform, containerClass})=>
   </h2>
 
   {/* Icon */}
-  <div className="text-3xl md:text-5xl text-white z-10 opacity-50 group-hover:opacity-100">
+  <div className="text-3xl md:text-5xl text-zinc-400 z-10 group-hover:text-white">
   {icon}
   </div>
 
@@ -133,26 +137,25 @@ const Tools: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative bg-black duration-500 transition-colors" id="programs">
+    <div className="relative bg-gradient-to-r from-blue-100 to-green-100 duration-500 transition-colors" id="programs">
       <div className="pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-md uppercase md:text-[20px] text-white"
+          className="font-general pt-16 text-md uppercase md:text-[20px]"
         >
-          Enter the Age of Intelligent Machines
+           Explore AI Tools
         </h2>
       </div>
       <div className="px-5 py-12">
-        <p className="font-circular-web text-lg text-blue-50">AI Programs at Your Service</p>
-        <p className="max-x-md font-robert text-lg text-blue-50 opacity-50">
-          Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to <strong>Analyze</strong> vast data streams, <strong>Generate</strong> innovative ideas, <strong>Fix</strong> complex problems, and <strong>Adapt</strong> in real time, these intelligent systems are shaping the future. Prepare for a reality where technology isn&apos;t just a tool, but a partner in progress, transforming industries and enhancing lives.
-        </p>
+        <p className="font-circular-web text-lg"> Discover the power of AI-driven tools transforming industries and everyday life.</p>
+        <p className="max-x-md font-robert text-lg opacity-75">
+        Dive deeper into how these tools work, their impact, and how they can help you stay ahead in an ever-changing technological world.        </p>
       </div>
 
       {/* devin animation section */}
       <div className='relative'>
       <div className='text-center' ref={motionRef}>
-        <h1 className="special-font hero-heading text-white"><b>a</b>ble to w<b>o</b>rk<br /> with h<b>u</b>ndr<b>e</b>ds of t<b>00</b>ls</h1>
+        <h1 className="special-font hero-heading"><b>a</b>ble to w<b>o</b>rk<br /> with h<b>u</b>ndr<b>e</b>ds of t<b>00</b>ls</h1>
       </div>
       <div className='flex gap-5 justify-center z-20' ref={cardsRef}>
         <div className='flex flex-col gap-3 trigger'>
@@ -191,10 +194,10 @@ const Tools: React.FC = () => {
       <div>
         <div className="flex flex-col items-center gap-5 pt-5 px-14 pb-16 mt-[200px]">
           <div className="flex flex-col items-center gap-5">
-            <h3 className="font-general text-2xl text-white">
+            <h3 className="font-general text-2xl">
               AI Programs at Your Service
             </h3>
-            <p className="text-sm text-white">
+            <p className="text-sm ">
               Dive into a world where AI doesn&apos;t just respond—it evolves. With capabilities to analyze vast data streams, generate innovative ideas, fix complex problems, and adapt in real time, these intelligent systems are shaping the future. Prepare for a reality where technology isn&apos;t just a tool, but a partner in progress, transforming industries and enhancing lives.
             </p>
           </div>

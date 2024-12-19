@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
                 key={item}
                 onMouseEnter={handleMouseEnter}
                 href={`#${item.toLowerCase()}`}
-                className="nav-hover-btn text-[#E5E5E5]"
+                className="nav-hover-btn"
               >
                 {item}
               </a>

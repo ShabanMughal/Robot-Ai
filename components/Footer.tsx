@@ -4,7 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <div className='bg-body flex justify-between items-center p-5 px-[100px]'>
+    <div className='bg-white flex justify-between items-center p-5 px-[100px]'>
       <div className=''>
         <p className='text-xl'>&copy; 2024 ReImagine. All rights reserved.</p>
       </div>

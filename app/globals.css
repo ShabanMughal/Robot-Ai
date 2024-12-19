@@ -116,7 +116,7 @@
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-xs uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 after:bg-black cursor-pointer;
   }
 
   .floating-nav {
@@ -164,7 +164,7 @@
   }
 
   .bento-tilt_1 {
-    @apply relative secondary-border overflow-hidden rounded-md transition-transform duration-300 ease-out w-full;
+    @apply relative border border-slate-400 overflow-hidden rounded-md transition-transform duration-300 ease-out w-full;
   }
 
   .bento-tilt_2 {

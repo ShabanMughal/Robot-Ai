@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SecondRobot from './SecondRobot';
@@ -9,10 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    // Animate the title
     if (titleRef.current) {
       gsap.fromTo(
         titleRef.current,
@@ -31,72 +29,39 @@ const Contact = () => {
         }
       );
     }
-
-    // Animate form fields
-    if (formRef.current) {
-      const inputs = formRef.current.querySelectorAll<HTMLInputElement>('.form-input input');
-      gsap.fromTo(
-        inputs,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: formRef.current,
-            start: 'top 85%',
-            end: 'top 60%',
-          },
-        }
-      );
-    }
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black transition-colors duration-500" id="contact">
+    <div className="relative h-full bg-gradient-to-r from-blue-100 to-green-100 transition-colors duration-500" id="contact">
       {/* Section Title */}
       <div className="md:pb-8 flex flex-col items-center gap-5">
         <h2
           ref={titleRef}
-          className="font-general pt-16 text-sm uppercase md:text-[20px] text-white"
+          className="font-general pt-16 text-sm uppercase md:text-[20px] text-center"
         >
           Contact Us for More Information
         </h2>
       </div>
 
+      {/* Contact Section */}
       <div className="flex flex-col md:flex-row items-center justify-center px-5 py-12 gap-2 md:gap-10">
-        {/* Form Section */}
-        <div className="w-full md:w-1/2">
-          <form ref={formRef} className="flex flex-col gap-8">
-            {/* Name Field */}
-            <div className="relative group form-input">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 dark:text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
-              />
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </div>
-            {/* Message Field */}
-            <div className="relative group form-input">
-              <input
-                type="text"
-                placeholder="Your message..."
-                className="w-full px-4 py-2 bg-transparent border-b border-gray-500 dark:text-white focus:outline-none focus:border-blue-500 transition-all duration-300"
-              />
-              <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </div>
-            {/* Submit Button */}
-            <Button title="Submit" id="submit-btn" containerClass="!w-full !bg-blue-500" />
-          </form>
+        <div className="w-full md:w-1/2 text-center">
+          <h1 className="text-2xl font-bold">Connect with us</h1>
+          <p className="mt-4 text-lg">Have questions or need more information? Click the button below to send us an email.</p>
+          
+          {/* Mailto Button */}
+          <a
+            href="mailto:your-email@example.com?subject=Inquiry&body=Hello, I would like to know more about your services."
+            className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition-all"
+          >
+            Send Email
+          </a>
         </div>
 
         {/* 3D Model Section */}
-        <div className="w-[100%] h-[300px] md:h-auto md:w-1/2 flex items-center justify-center relative">
+        <div className="w-full md:w-1/2 flex items-center justify-center relative">
           <SecondRobot />
-          <div className="absolute w-[150px] h-10 bg-black right-5 bottom-5"></div>
+          <div className="absolute w-[150px] h-10 bg-gradient-to-r from-blue-100 to-green-100 right-5 bottom-5"></div>
         </div>
       </div>
     </div>

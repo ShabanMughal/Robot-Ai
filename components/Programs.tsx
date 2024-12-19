@@ -8,32 +8,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Type definition for each tool
 interface Tool {
-  title: string;
+  title: any;
   description: string;
   image: string;
 }
 
 const ToolsData: Tool[] = [
   {
-    title: 'Your Personal Assistant',
+    title: <>Pers<b>o</b>n <b>a</b>l A<b>s</b>sist<b>a</b>nt</>,
     description:
       `Artificial Intelligence is revolutionizing how we learn. AI tools offer personalized learning experiences, adapting to each individual's pace and preferences. Whether it's self-paced learning, coding tutorials, or even technical problem-solving, AI helps learners at all levels. With features like real-time feedback, AI-driven assessments, and adaptive learning paths, mastering new skills has never been easier. Embrace AI to enhance your learning journey and explore new frontiers of knowledge.`,
     image: 'images/feature-2.jpg',
   },
   {
-    title: 'Transforming Industries',
-    description:
-      `AI robots are transforming industries by taking over repetitive tasks, improving efficiency, and enabling new levels of automation. These robots are equipped with machine learning algorithms and advanced sensors, enabling them to perform complex tasks across various fields, from manufacturing to healthcare. With human-robot collaboration on the rise, AI-powered robots are revolutionizing the workforce, allowing humans to focus on higher-level, creative tasks while robots handle the mundane.`,
-    image: 'images/tool-1.jpg',
-  },
-  {
-    title: 'Smart Workflows with AI Bots',
+    title: <>Sma<b>r</b>t w<b>o</b>rkflows wih ai <b>bots</b></>,
     description:
       `AI bots are increasingly being used to optimize workflows and boost productivity. From automating customer service with chatbots to streamlining content management, AI bots are an essential part of modern workplaces. These bots can handle a range of functions, such as scheduling meetings, providing real-time data insights, and assisting in complex decision-making. By integrating AI bots into everyday tasks, businesses improve efficiency and reduce human error, allowing employees to focus on what matters most.`,
     image: 'images/tool-2.jpg',
   },
   {
-    title: 'Empowering Solutions',
+    title: <>e<b>m</b>rpoweri<b>n</b>g s<b>o</b>luti<b>o</b>ns</>,
     description:
       `AI is at the forefront of solving some of the world’s most pressing challenges. From combatting climate change to improving disaster response, AI tools are helping humanity make significant strides in addressing global issues. For example, predictive models powered by AI can forecast natural disasters, enabling timely evacuations and resource distribution. In the field of healthcare, AI is driving advancements in diagnostics and personalized medicine, improving the quality of life worldwide.`,
     image: 'images/tool-3.jpg',
@@ -91,18 +85,17 @@ const Programs: React.FC = () => {
   
 
   return (
-    <div className="relative bg-body transition-colors px-5 md:px-10 pb-10">
+    <div className="relative bg-white transition-colors px-5 md:px-10 pb-10">
       
-      <h2 className="font-general pt-16 text-lg uppercase text-white">
-          Welcome to the Future of Robotics
+      <h2 className="font-general pt-16 text-lg uppercase text-center">
+      Discover the Cutting-Edge World of AI & Robotics
         </h2>
       <div className="px-5 py-10 text-center">
-            <p className="text-4xl text-blue-50 font-robert-medium">
-            AI & Robot Programs: Shaping the Future
+            <p className="text-4xl font-robert-medium">
+            Transforming the Present. Innovating the Future.
             </p>
-            <p className="max-x-md font-circular-web text-lg  text-blue-50 opacity-50 mt-10">
-            Explore the transformative potential of AI and robotic technology in learning, work, and global change. Discover how these innovations are revolutionizing industries and enhancing human capabilities.
-
+            <p className="max-x-md font-circular-web text-lg opacity-75 mt-10">
+            Dive into the groundbreaking advancements in AI and robotics that are reshaping industries, empowering solutions, and optimizing workflows. Explore the tools shaping a smarter tomorrow today.
             </p>
           </div>
       {ToolsData.map((tool, index) => (
@@ -114,7 +107,7 @@ const Programs: React.FC = () => {
           <img
             src={tool.image}
             alt={`Section ${index + 1}`}
-            className="h-[500px] object-cover hidden md:block w-[100%]"
+            className="h-[500px] object-cover hidden md:block w-[100%] rounded-2xl"
           />
           <div className="w-[100%]">
             <h1 className="bento-title special-font">
