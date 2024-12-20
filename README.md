@@ -111,5 +111,5 @@ For any inquiries or feedback, feel free to reach out:
 
 - **Portfolio**: [https://shaban-protfolio.vercel.app/](https://shaban-protfolio.vercel.app/)
 - **Email**: [thandermughal@gmail.com](mailto:thandermughal@gmail.com)
-- **GitHub**: [ShabanMughal](https://github.com/ShabanMughal)
+- **Linkedin**: [ShabanMughal](https://www.linkedin.com/in/shaban-mughal-27386a2a9)
 
