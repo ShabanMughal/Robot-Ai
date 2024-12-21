@@ -51,8 +51,8 @@ AI systems often lack engaging interfaces and accessible designs. This project r
    - Integrated Landbot to enable dynamic and user-friendly AI chat experiences.
 3. **Smooth Animations**
    - Leveraged GSAP for advanced animations triggered by user interactions and scrolling.
-4. **Light Theme**
-   - Designed with a clean and modern light color scheme for a refreshing user interface.
+4. **Light Theme with Zentry Font**
+   - Designed with a clean and modern light color scheme using the Zentry font to elevate the user interface.
 5. **Responsive Design**
    - Ensures a seamless experience across all devices, including desktops, tablets, and smartphones.
 
@@ -83,6 +83,7 @@ Credit goes to the following platforms and tools that made this project possible
 - **Landbot**: For providing free integration to make the website interactive with AI-driven conversations.
 - **Spline**: For enabling the creation of captivating 3D models.
 - **GSAP**: For delivering smooth, engaging animations.
+- **Zentry Font**: A modern and visually appealing font introduced in the JavaScript Mastery tutorial, enhancing the project's aesthetics.
 - **Vercel**: For seamless project hosting.
 
 ---
