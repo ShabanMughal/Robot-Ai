@@ -1,24 +1,10 @@
 # Reimagine AI System
 
-A groundbreaking AI-powered system developed as part of the 'Reimagine' hackathon hosted by JavaScript Mastery to celebrate their 1 million YouTube subscribers. This project demonstrates innovative technology, featuring 3D models, AI interactivity, and smooth animations, creating an engaging and seamless user experience.
+A groundbreaking AI-powered system developed as part of the hackathon hosted by JavaScript Mastery to celebrate their 1 million YouTube subscribers. This project demonstrates innovative technology, featuring 3D models, AI interactivity, and smooth animations, creating an engaging and seamless user experience.
 
 ## Hosted Link
 
 Explore the project live: [Reimagine AI System](https://robot-ai.vercel.app/)
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Usage](#usage)
-- [Learn More](#learn-more)
-- [Credits](#credits)
-- [Future Enhancements](#future-enhancements)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
 
 ---
 
