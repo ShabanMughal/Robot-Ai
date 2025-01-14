@@ -96,7 +96,7 @@ Special thanks to:
 
 For any inquiries or feedback, feel free to reach out:
 
-- **Portfolio**: [https://shaban-protfolio.vercel.app/](https://shaban-protfolio.vercel.app/)
+- **Portfolio**: [https://thunder-portfolio.vercel.app/](https://thunder-portfolio.vercel.app/)
 - **Email**: [thandermughal@gmail.com](mailto:thandermughal@gmail.com)
 - **Linkedin**: [ShabanMughal](https://www.linkedin.com/in/shaban-mughal-27386a2a9)
 
